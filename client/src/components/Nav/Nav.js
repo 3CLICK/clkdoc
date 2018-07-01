@@ -1,11 +1,25 @@
 import React from "react";
+import "./Footer.css";
 
-const Nav = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a className="navbar-brand" href="/">
-      React Reading List
-    </a>
-  </nav>
+
+const Nav = props => (
+<nav class="navbar" style="background-color: #ffffff;">
+  <div class="container-fluid text-center">
+  <h1>
+       
+  <a class="align-left">
+      <span class="glyphicon glyphicon-th pull-left" aria-hidden="true"></span>
+  </a>
+
+      <strong>clkDoc</strong>
+
+  <a class="align-right">
+      <span class="glyphicon glyphicon-user pull-right" aria-hidden="true"></span>
+  </a>
+  
+  </h1>
+  </div>
+</nav>
 );
 
 export default Nav;
