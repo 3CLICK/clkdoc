@@ -1,0 +1,13 @@
+.container{
+    width: 80%;
+    position: relative;
+}
+
+.jumbotron{
+    vertical-align: middle;  /* vertical alignment of the inline element */
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    position: sticky;
+    background-color: #ffffff;
+}
