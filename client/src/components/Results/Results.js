@@ -63,6 +63,7 @@ const Results = props => (
 			</form>
 		</div>
 	</div>
+	
 	<div class="row">
 	</div>
 </div>
