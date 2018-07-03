@@ -1,8 +1,8 @@
 const { User } = require("../models");
 
 module.exports = {
-  findAll: (query, cb) => {
-    User.find(query)
+  findAll: (cb) => {
+    User.find({})
       .sort({ _id: -1 })
       .then((data) => cb(data));
   },
