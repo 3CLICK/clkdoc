@@ -6,12 +6,13 @@ const {userController} = require('./../controllers')
 // API Routes
 router.use("/api", apiRoutes);
 
+// router.get("/users",(req,res) => {
+
+// })
+
 // If no API routes are hit, send the React app
 router.use((req, res) => {
-  // res.sendFile(path.join(__dirname, "../client/build/index.html"));
-  userController.findAll( (data) => {
-    res.json(data);
-  });
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
 module.exports = router;
