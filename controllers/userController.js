@@ -1,10 +1,10 @@
 const { User } = require("../models");
 
 module.exports = {
-  findAll: (cb) => {
+  findAll: (req,res) => {
     User.find({})
-      .sort({ _id: -1 })
-      .then((data) => cb(data));
+    .sort({ _id: -1 })
+    .then(data => res.json(data));
   },
   findById: (id, cb) => {
     User.findById(id)
