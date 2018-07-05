@@ -16,8 +16,7 @@ const users = [
     dob: new Date("02/22/1986"),
     email: "abnerdc86@gmail.com",
     password: "123456",
-    lastLogin: Date.now,
-    userType: "Doctor"
+    userType: "Doctor",
   },
   {
     userName: "rayala",
@@ -25,8 +24,7 @@ const users = [
     lastName: "Ayala",
     dob: new Date("05/11/1984"),
     email: "rayala@gmail.com",
-    password: "123",
-    lastLogin: Date.now,
+    dateCreated: Date.now,
     userType: "Client"
   },
   {
@@ -36,8 +34,16 @@ const users = [
     dob: new Date("10/26/1989"),
     email: "mvasquez@gmail.com",
     password: "1234",
-    lastLogin: Date.now,
     userType: "Doctor"
+  },
+  {
+    "userName": "jbarroso",
+    "firstName": "Jany",
+    "lastName": "Barroso",
+    "dob": "1986-10-26T05:00:00.000Z",
+    "email": "janyb86@gmail.com",
+    "password": "123456",
+    "userType": "Client"
   }
 ];
 

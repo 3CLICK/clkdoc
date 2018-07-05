@@ -10,7 +10,14 @@ const user = new Schema({
   password: { type: String, required: true, minlength: 6 },
   dateCreated: { type: Date, default: Date.now },
   lastLogin: { type: Date, default: Date.now },
-  userType: { type: String, enum: ["Client", "Doctor"], required: "User should be eigtherDoctor or a Client." },
+  userType: { 
+    type: String, 
+    enum: ["Client", "Doctor"], 
+    required: "User should be eigtherDoctor or a Client." 
+  },
+  image: {
+    type: String, default: "../client/public/user.svg"
+  }
 });
 
 const User = mongoose.model("User", user);
