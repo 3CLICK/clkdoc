@@ -47,6 +47,48 @@ const users = [
   }
 ];
 
+// const doctors =[
+//   {
+//     _docID: ,
+//     firstName: "Rafael",
+//     lastName: "Barrial",
+//     specialty: "Internal Medicine",
+//     address: "1611 NW 12th Ave",
+//     city: "Miami",
+//     state: "FL",
+//     zipCode: 33136,
+//     phoneNumber: "3055855150",
+//     insurance: "PPO",
+//     images: "https://asset3.betterdoctor.com/assets/general_doctor_male.png"
+//   },
+//   {
+//     _docID: ,
+//     firstName: "Kurt",
+//     lastName: "Friedman",
+//     specialty: "Oral & Maxillofacial Surgery",
+//     address: "1201 NW 16th St",
+//     city: "Miami",
+//     state: "FL",
+//     zipCode: 33125,
+//     phoneNumber: "3055757000",
+//     insurance: "PPO",
+//     images: "https://asset3.betterdoctor.com/assets/general_doctor_male.png"
+//   },
+//   {
+//     _docID: ,
+//     firstName: "Joseph",
+//     lastName: "Gutman",
+//     specialty: "Endocrinology",
+//     address: "9380 SW 150th St",
+//     city: "Miami",
+//     state: "FL",
+//     zipCode: 33176,
+//     phoneNumber: "3052532665",
+//     insurance: "PPO",
+//     images: "https://asset3.betterdoctor.com/assets/general_doctor_male.png"
+//   }
+// ];
+
 db.User
   .remove({})
   .then(() => db.User.collection.insertMany(users))
