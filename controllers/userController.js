@@ -1,11 +1,12 @@
-const { User,Client,Doctor } = require("../models");
+const { User, Client, Doctor } = require("../models");
+const createUser = require('../scripts/createUser');
 
 module.exports = {
-  findAll: (req,res) => {
+  findAll: (req, res) => {
     User.find(req.query)
-    .sort({ _id: -1 })
-    .then(data => res.json(data))
-    .catch(err => res.status(422).json(err));
+      .sort({ _id: -1 })
+      .then(data => res.json(data))
+      .catch(err => res.status(422).json(err));
   },
   findById: (req, res) => {
     User.findById(req.params.id)
@@ -13,9 +14,14 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: (req, res) => {
-    User.create(req.body)
-      .then(data => res.json(data))
-      .catch(err => res.status(422).json(err));
+    createUser(req.body, (err, data) => {
+      if (err) {
+        console.log(err);
+        res.status(422).json(err);
+      } else {
+        res.json(data);
+      }
+    });
   },
   update: (req, res) => {
     User.findOneAndUpdate({ _id: req.params.id }, req.body)
