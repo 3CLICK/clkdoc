@@ -1,89 +1,22 @@
 import React from "react";
 import "./Availability.css";
 
-const DocProfile = props =>
-<div class="row" id="scheduleHolder">
-  <div class="container">
-    <h2 class="text-center">Doctor's Availability</h2>
-    <p class="pull-right">Current Week: <span>{props.currentWeek}</span> </p>            
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Time Slot</th>
-          <th>Monday</th>
-          <th>Tuesday</th>
-          <th>Wednesday</th>
-          <th>Thursday</th>
-          <th>Friday</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>8 AM</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>                
-        </tr>
-        <tr>
-          <td>9 AM</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>                
-        </tr>
-        <tr>
-          <td>10 AM</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>                
-        </tr>
-        <tr>
-          <td>11 AM</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>                
-        </tr>
-        <tr>
-          <td>1 PM</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>                
-        </tr>
-        <tr>
-          <td>2 PM</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>                
-        </tr>
-        <tr>
-          <td>3 PM</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>                
-        </tr>
-        <tr>
-          <td>4 PM</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>                
-        </tr>                  
-      </tbody>
-    </table>
-  </div>
+const Availability = props =>
+<div class="container">
+  <div class="panel panel-default col-xs-8">
+      <div class="panel-heading">
+          <h3>{props.date}
+            <a class="btn btn-primary save pull-right">Save Appointment</a>
+          </h3>
+      </div>
+      <div class="panel-body pull-left">
+        <ul id="menu" class="pull-left">
+          <li class="col-xs-4">Time: {props.time}</li>
+          <li class="col-xs-4">Duration: {props.duration}</li>
+          <li class="col-xs-4">Location: {props.location}</li>
+        </ul> 
+      </div>
+  </div>   
 </div>
-export default DocProfile;
+
+export default Availability;
