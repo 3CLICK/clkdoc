@@ -1,12 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const doctorProfileShema = new Schema({
-  _id: Schema.Types.ObjectId,
-  specialty: {
-    type: String,
-    required: true
-  },
+const Profile = new Schema({
+  specialty: String,
   address: {
     type: String,
     required: true,
@@ -30,8 +26,16 @@ const doctorProfileShema = new Schema({
   },
   insurance: [String],
   languages: [String],
+  ssn: {
+    type: Number,
+    unique: true
+  },
+  emergencyContact: {
+    name: String,
+    phone: Number,
+  },
+  allergies: [String],
+  reason_for_visit: String
 });
 
-const Doctor = mongoose.model("Doctor", doctorProfileShema);
-
-module.exports = Doctor;
+module.exports = Profile;

@@ -1,4 +1,4 @@
-const { User } = require("../models");
+const { User,Client,Doctor } = require("../models");
 
 module.exports = {
   findAll: (req,res) => {

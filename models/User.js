@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const  Profile = require('./Profile');
 
 const user = new Schema({
-  _id: Schema.Types.ObjectId,
   userName: { 
     type: String,
     required: "UserName is required",
@@ -33,10 +33,12 @@ const user = new Schema({
     minlength: 6 },
   dateCreated: {
     type: Date, 
+    required: true,
     default: Date.now 
   },
   lastLogin: {
-    type: Date, 
+    type: Date,
+    required: true,
     default: Date.now 
   },
   userType: { 
@@ -48,7 +50,7 @@ const user = new Schema({
     type: String, 
     default: "../client/public/user.svg"
   },
-  profile: Schema.Types.ObjectId
+  profile: Profile
 });
 
 const User = mongoose.model("User", user);
