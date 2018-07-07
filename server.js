@@ -16,8 +16,18 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
-// Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/clkdoc");
+// Getting Mongoose connected to the database
+const prodURL = process.env.MONGODB_URI
+const devURL = "mongodb://localhost:27017/clkdoc";
+mongoose.connect((prodURL || devURL),
+  { useNewUrlParser: true, keepAlive:true},
+  (err, database) => {
+    if (err) {
+      console.log(err)
+    } else {
+      console.log("Connected to MongoDB.")
+    }
+  });
 
 // Start the API server
 app.listen(PORT, () => {
