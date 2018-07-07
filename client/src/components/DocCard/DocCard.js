@@ -15,6 +15,7 @@ const Results = props =>(
     <h6 class="card-text">Cardiologist</h6>
     <h6 class="card-text">555 SW 40 Ave. 33197</h6>
     <a href="#" class="btn btn-primary">Select</a>
+      {/*Need if/else function. Sign-in modal, view doc profile otherwise*/}
   </div>
 </div>
 )

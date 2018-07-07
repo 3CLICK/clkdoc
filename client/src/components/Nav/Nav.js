@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 
-
+    //might need to get ride of the "onclick" embedding in the buttons
     function w3_open() {
         document.getElementById("mySidebar").style.display = "block";
     }
@@ -10,7 +10,7 @@ import "./Footer.css";
     }
 
 const Nav = props => (
-<nav class="navbar">
+<nav class="navbar" >
   <div class="container-fluid text-center">
   <h1>
        
@@ -20,9 +20,9 @@ const Nav = props => (
 
       <strong>clkDoc</strong>
 
-  <a class="align-right">
-      <span class="glyphicon glyphicon-user pull-right" aria-hidden="true"></span>
-  </a>
+
+  {/*WE NEED TO PASS IN THE CORRECT COMPONENT WHEN: NOT LOGGED IN, PATIENT, OR DOCTOR*/}
+  {/*END*/}
   
   </h1>
   </div>

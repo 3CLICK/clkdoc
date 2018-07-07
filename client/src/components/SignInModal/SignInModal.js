@@ -1,6 +1,9 @@
 import React from "react";
 import "./SignInModal.css";
 
+const SignInModal = props => (
+
+//everything pertaining to the modal 
 <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
@@ -20,8 +23,8 @@ import "./SignInModal.css";
         <div class="tab-pane fade active in" id="signin">
             <form class="form-horizontal">
             <fieldset>
-            <!-- Sign In Form -->
-            <!-- Text input-->
+{/*            <!-- Sign In Form -->
+            <!-- Text input-->*/}
             <div class="control-group">
               <h4 class="control-label" for="userid">UserName:</h4>
               <div class="controls">
@@ -29,16 +32,16 @@ import "./SignInModal.css";
               </div>
             </div>
 
-            <!-- Password input-->
-            <div class="control-group">
+{/*            <!-- Password input-->
+*/}            <div class="control-group">
               <h4 class="control-label" for="passwordinput">Password:</h4>
               <div class="controls">
                 <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
               </div>
             </div>
 
-            <!-- Multiple Checkboxes (inline) -->
-            <div class="control-group">
+{/*            <!-- Multiple Checkboxes (inline) -->
+*/}            <div class="control-group">
               <label class="control-label" for="rememberme"></label>
               <div class="controls">
                 <h5 class="checkbox inline" for="rememberme-0">
@@ -48,8 +51,8 @@ import "./SignInModal.css";
               </div>
             </div>
 
-            <!-- Button -->
-            <div class="control-group">
+{/*            <!-- Button -->
+*/}            <div class="control-group">
               <label class="control-label" for="signin"></label>
               <div class="controls">
                 <button id="signin" name="signin" class="btn btn-success">Sign In</button>
@@ -61,8 +64,8 @@ import "./SignInModal.css";
         <div class="tab-pane fade" id="signup">
             <form class="form-horizontal">
             <fieldset>
-            <!-- Sign Up Form -->
-            <!-- Text input-->
+            {/*<!-- Sign Up Form -->
+            <!-- Text input-->*/}
             <div class="control-group">
               <h4 class="control-label" for="Email">Email:</h4>
               <div class="controls">
@@ -70,16 +73,16 @@ import "./SignInModal.css";
               </div>
             </div>
             
-            <!-- Text input-->
-            <div class="control-group">
+{/*            <!-- Text input-->
+*/}            <div class="control-group">
               <h4 class="control-label" for="userid">Username:</h4>
               <div class="controls">
                 <input id="userid" name="userid" class="form-control" type="text" placeholder="JoeSixpack" class="input-large" required="">
               </div>
             </div>
             
-            <!-- Password input-->
-            <div class="control-group">
+{/*            <!-- Password input-->
+*/}            <div class="control-group">
               <h4 class="control-label" for="password">Password:</h4>
               <div class="controls">
                 <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
@@ -87,16 +90,16 @@ import "./SignInModal.css";
               </div>
             </div>
             
-            <!-- Text input-->
-            <div class="control-group">
+{/*            <!-- Text input-->
+*/}            <div class="control-group">
               <h4 class="control-label pull-right" for="reenterpassword">Re-Enter Password:</h4>
               <div class="controls">
                 <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
               </div>
             </div>
             
-            <!-- Multiple Radios (inline) -->
-            <br>
+{/*            <!-- Multiple Radios (inline) -->
+*/}            <br>
             <div class="control-group">
               <h4 class="control-label pull-left" for="humancheck">Humanity Check:</h4>
               <div class="controls">
@@ -107,8 +110,8 @@ import "./SignInModal.css";
               </div>
             </div>
             
-            <!-- Button -->
-            <div class="control-group">
+{/*            <!-- Button -->
+*/}            <div class="control-group">
               <label class="control-label" for="confirmsignup"></label>
               <div class="controls">
                 <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
@@ -127,3 +130,5 @@ import "./SignInModal.css";
     </div>
   </div>
 </div>
+
+export default SignInModal;
