@@ -1,29 +1,37 @@
-const { User } = require("../models");
+const { User, Client, Doctor } = require("../models");
+const createUser = require('../scripts/createUser');
 
 module.exports = {
-  findAll: (req,res) => {
-    User.find({})
-    .sort({ _id: -1 })
-    .then(data => res.json(data));
+  findAll: (req, res) => {
+    User.find(req.query)
+      .sort({ _id: -1 })
+      .then(data => res.json(data))
+      .catch(err => res.status(422).json(err));
   },
-  findById: (id, cb) => {
-    User.findById(id)
-      .then(data => cb(data))
-      .catch(err => cb(err));
+  findById: (req, res) => {
+    User.findById(req.params.id)
+      .then(data => res.json(data))
+      .catch(err => res.status(422).json(err));
   },
-  create: (user, cb) => {
-    User.create(user)
-      .then(data => cb(data))
-      .catch(err => cb(err));
+  create: (req, res) => {
+    createUser(req.body, (err, data) => {
+      if (err) {
+        console.log(err);
+        res.status(422).json(err);
+      } else {
+        res.json(data);
+      }
+    });
   },
-  update: (id, query, cb) => {
-    User.findOneAndUpdate({ _id: id }, query)
-      .then(data => cb(data))
-      .catch(err => cb(err));
+  update: (req, res) => {
+    User.findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then(data => res.json(data))
+      .catch(err => res.status(422).json(err));
   },
-  remove: (id, cb) => {
-    User.deleteOne({ _id: id })
-      .then(data => cb(data))
-      .catch(err => cb(err));
+  remove: (req, res) => {
+    User.findById({ _id: req.params.id })
+      .then(data => data.remove())
+      .then(data => res.json(data))
+      .catch(err => res.status(422).json(err));
   }
 };
