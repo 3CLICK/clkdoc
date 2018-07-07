@@ -1,10 +1,13 @@
-.footer {
-    position: relative;
+footer {
+    position: fixed;
     bottom: 0;
     left: 0;
     background: #54c0ff;
     min-height: 20px;
     width: 100%;
-    text-align: center;
     color: #ffffff;
+}
+
+.fa {
+	color:white;
 }
