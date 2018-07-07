@@ -10,14 +10,13 @@ mongoose.connect(dbURL, { useNewUrlParser: true },
 		}
 	});
 
-const getDocs = () => {
-	Client.find({})
-		.populate("user")
+const getUsers = () => {
+	User.find({})
 		.then(data => console.log(JSON.stringify(data, "", 2)))
 		.catch(err => console.log(err));
 }
 
-getDocs();
+getUsers();
 // test(Client);
 // test(Doctor);
 
