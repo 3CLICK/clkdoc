@@ -1,29 +1,31 @@
 const { Doctor } = require("../models");
 
 module.exports = {
-  findAll: (query, cb) => {
-    Doctor.find(query)
+  findAll: (req, res) => {
+    Doctor.find(req.query)
       .sort({ _id: -1 })
-      .then((data) => cb(data));
+      .then(data => res.json(data))
+      .catch(err => res.status(422).json(err));
   },
-  findById: (id, cb) => {
-    Doctor.findById(id)
-      .then(data => cb(data))
-      .catch(err => cb(err));
+  findById: (req, res) => {
+    Doctor.findById(req.params.id)
+      .then(data => res.json(data))
+      .catch(err => res.status(422).json(err));
   },
-  create: (doctor, cb) => {
-    Doctor.create(doctor)
-      .then(data => cb(data))
-      .catch(err => cb(err));
+  create: (req, res) => {
+    Doctor.create(req.body)
+      .then(data => res.json(data))
+      .catch(err => res.status(422).json(err));
   },
-  update: (id, query, cb) => {
-    Doctor.findOneAndUpdate({ _id: id }, query)
-      .then(data => cb(data))
-      .catch(err => cb(err));
+  update: (req, res) => {
+    Doctor.findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then(data => res.json(data))
+      .catch(err => res.status(422).json(err));
   },
-  remove: (id, cb) => {
-    Doctor.deleteOne({ _id: id })
-      .then(data => cb(data))
-      .catch(err => cb(err));
+  remove: (req, res) => {
+    Doctor.findById({ _id: req.params.id })
+      .then(data => data.remove())
+      .then(data => res.json(data))
+      .catch(err => res.status(422).json(err));
   }
 };

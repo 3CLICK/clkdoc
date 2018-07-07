@@ -1,29 +1,31 @@
 const {Client} = require("../models");
 
 module.exports = {
-  findAll: (query, cb) => {
-    Client.find(query)
-    .sort({ _id: -1 })
-    .then((data) => cb(data));
+  findAll: (req, res) => {
+    Client.find(req.query)
+      .sort({ _id: -1 })
+      .then(data => res.json(data))
+      .catch(err => res.status(422).json(err));
   },
-  findById: (id, cb) => {
-    Client.findById(id)
-      .then(data => cb(data))
-      .catch(err => cb(err));
+  findById: (req, res) => {
+    Client.findById(req.params.id)
+      .then(data => res.json(data))
+      .catch(err => res.status(422).json(err));
   },
-  create: (client,cb) => {
-    Client.create(client)
-      .then(data => cb(data))
-      .catch(err => cb(err));
+  create: (req, res) => {
+    Client.create(req.body)
+      .then(data => res.json(data))
+      .catch(err => res.status(422).json(err));
   },
-  update: (id, query, cb) => {
-    Client.findOneAndUpdate({ _id: id }, query)
-      .then(data => cb(data))
-      .catch(err => cb(err));
+  update: (req, res) => {
+    Client.findOneAndUpdate({ _id: req.params.id }, req.body)
+      .then(data => res.json(data))
+      .catch(err => res.status(422).json(err));
   },
-  remove: (id, cb) => {
-    Client.deleteOne({ _id: id })
-      .then(data => cb(data))
-      .catch(err => cb(err));
+  remove: (req, res) => {
+    Client.findById({ _id: req.params.id })
+      .then(data => data.remove())
+      .then(data => res.json(data))
+      .catch(err => res.status(422).json(err));
   }
 };
