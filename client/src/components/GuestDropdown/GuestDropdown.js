@@ -1,9 +1,7 @@
 import React from "react";
-import "./SignInButton.css";
-// WHATEVER I HAVE LABELED FOR SIGNINMODAL, IMPORT IT
+import "./GuestDropdown.css";
 
-
-const SignInButton = props =>
+const GuestDropdown = props =>
 
   <a class="align-right" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">
   	<span class="glyphicon glyphicon-user pull-right" aria-hidden="true"></span>
@@ -11,4 +9,4 @@ const SignInButton = props =>
 
 
 
-export default SignInButton;
+export default GuestDropdown;
