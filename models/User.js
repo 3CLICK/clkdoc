@@ -50,6 +50,7 @@ const user = new Schema({
     type: String, 
     default: "../client/public/user.svg"
   },
+  // appointments: [{ type: Schema.Types.ObjectId, ref: "Appointment" }],
   profile: Profile
 });
 

@@ -3,7 +3,7 @@ const saltRounds = 10;
 const {User} = require('../models')
 // const mongoose = require('mongoose');
 
-const create =  (user) => {
+const createUser =  (user,cb) => {
 	bcrypt.hash(user.password, saltRounds, (err, hash) => {
 		if (!err) {
 			let u = new User({
@@ -14,27 +14,15 @@ const create =  (user) => {
 				email: user.email,
 				password: hash,
 				userType: user.userType,
-				profile: {
-					ssn: user.profile.ssn,
-					address: user.profile.address,
-					city: user.profile.city,
-					state: user.profile.state,
-					zipCode: user.profile.zipCode,
-					phoneNumber: user.profile.phoneNumber,
-					// emergencyContact: {
-					// 	name: user.profile.emergencyContact.name,
-					// 	phone: user.profile.emergencyContact.phone,
-					// },
-					insurance: user.profile.insurance,
-					allergies: user.profile.allergies,
-					reason_for_visit: user.profile.reason_for_visit,
-				}
+				profile: user.profile
 			});
-			user.save((err) => {
+			u.save((err) => {
 				if (err) {
-					console.error(`Could not create user error: ${err}`)
+					console.error(`Could not create user error: ${err}`);
+					cb(err)
 				} else {
-					console.log('user saved.')
+					let mes = "User saved!";
+					cb(mes)
 				}
 			});
 		} else {
@@ -43,4 +31,4 @@ const create =  (user) => {
 	});
 }
 
-module.exports = create;
+module.exports = createUser;

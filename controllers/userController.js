@@ -1,4 +1,4 @@
-const { User, Client, Doctor } = require("../models");
+const { User } = require("../models");
 const createUser = require('../scripts/createUser');
 
 module.exports = {
@@ -14,13 +14,8 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: (req, res) => {
-    createUser(req.body, (err, data) => {
-      if (err) {
-        console.log(err);
-        res.status(422).json(err);
-      } else {
-        res.json(data);
-      }
+    createUser(req.body, (mes) => {
+        res.json(mes);
     });
   },
   update: (req, res) => {

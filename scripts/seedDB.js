@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const {User} = require("../models");
+const { User, Appointment } = require("../models");
+const createUser = require('./createUser');
 // mongoose.Promise = global.Promise;
 
 // Getting Mongoose connected to the database
@@ -148,21 +149,76 @@ const users = [
     }
   }
 ];
+const appointments = [
+  {
+    doctor: "jgutman",
+    client: "mvasquez",
+    start: "7/25/18 10:00 AM",
+  },
+  {
+    doctor: "jgutman",
+    client: "ndiaz",
+    start: "7/25/18 9:00 AM",
+  },
+  {
+    doctor: "jgutman",
+    client: "rayala",
+    start: "7/25/18 11:00 AM",
+  },
+  {
+    doctor: "Kurt",
+    client: "ndiaz",
+    start: "7/26/18 9:00 AM",
+  },
+
+]
+
 const populateUsers = (userList) => {
-  users.forEach(user => {
-    User.create(user)
-    .then(data => {
-      console.log("User Succesfully Added!");
+  User
+    .remove({})
+    .then(() => {
+      userList.forEach(user => {
+        createUser(user, message => console.log(message))
+      })
     })
-    .catch(err => {
-      console.error(err);
+    .catch(() => console.log("Something went wrong!"));
+}
+
+async function getUserByUserName(username) {
+  let user = await User.findOne({ userName: username }, "_id")
+  return user;
+}
+
+async function createAppt(appt) {
+
+  let newAppt = new Appointment(
+    {
+      _docID: await getUserByUserName(appt.doctor),
+      _clientID: await getUserByUserName(appt.client),
+      start: new Date(appt.start),
     });
+    console.log(newAppt);
+  newAppt.save(err => {
+    if (err) {
+      console.log(err)
+    } else {
+      console.log("Appointment Scheduled!")
+    }
   });
 }
 
-User
-  .remove({})
-  .then(() => populateUsers(users));
+const populateAppt = (appts) => {
+  Appointment.remove({})
+    .then(() => {
+      appts.forEach(appt => {
+        Appointment.create(appt);
+      })
+    })
+}
 
+function plantSeeds() {
+  populateUsers(users)
+  populateAppt(appointments);
+}
 
-// console.log(JSON.stringify(users, '', 2));
+plantSeeds();
