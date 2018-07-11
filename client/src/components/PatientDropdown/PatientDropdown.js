@@ -7,7 +7,7 @@ const PatientDropdown = props => (
     <a class="dropdown-toggle" data-toggle="dropdown">
       <h6>Melvin</h6>
     </a>
-    <ul class="dropdown-menu" aria-labelle dby="dropdownMenuDivider">
+    <ul class="dropdown-menu" aria-label dby="dropdownMenuDivider">
       <li><a href="#">My Appointments</a></li>
       <li><a href="#">My Account</a></li>
       <li role="separator" class="divider"></li>
