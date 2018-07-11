@@ -25,7 +25,7 @@ mongoose.connect((prodURL || devURL),
     if (err) {
       console.log(err)
     } else {
-      console.log("Connected to MongoDB.")
+      console.log(`Connected to: ${database.name}`);
     }
   });
 

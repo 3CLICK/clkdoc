@@ -185,16 +185,17 @@ const populateUsers = (userList) => {
 }
 
 async function getUserByUserName(username) {
-  let user = await User.findOne({ userName: username }, "_id")
+  let user = await User.findOne({ userName: username }, "_id");
+  console.log(user);
   return user;
 }
 
-async function createAppt(appt) {
+function createAppt(appt) {
 
   let newAppt = new Appointment(
     {
-      _docID: await getUserByUserName(appt.doctor),
-      _clientID: await getUserByUserName(appt.client),
+      _docID: getUserByUserName(appt.doctor),
+      _clientID: getUserByUserName(appt.client),
       start: new Date(appt.start),
     });
     console.log(newAppt);
