@@ -1,9 +1,9 @@
 import React from "react";
-import "./Availability.css";
+import "./AppointmentCard.css";
 
-const Availability = props =>
+const AppointmentCard = props =>
 <div class="container">
-  <div class="panel panel-default col-xs-8">
+  <div class="panel panel-default col-xs-8 col-xs-offset-2">
       <div class="panel-heading">
           <h3>{props.date}
             <a class="btn btn-primary save pull-right">Save Appointment</a>
@@ -19,4 +19,4 @@ const Availability = props =>
   </div>   
 </div>
 
-export default Availability;
+export default AppointmentCard;
