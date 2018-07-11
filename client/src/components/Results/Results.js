@@ -15,22 +15,21 @@ const Results = props => (
       <form class="form-inline text-center" action="/action_page.php">
         <div class="form-group col-xs-2">
           <label for="zip">Zip Code:</label>
-          <input type="zip" class="form-control" id="zip">
+          <input type="zip" class="form-control" id="zip"/>
         </div>
         <div class="form-group col-xs-2 col-xs-offset-1">
           <label for="specialty">Specialty:</label>
-          <input type="specialty" class="form-control" id="specialty">
+          <input type="specialty" class="form-control" id="specialty"/>
         </div>
-          <div class="form-group col-xs-3 col-xs-offset-1">
+        <div class="form-group col-xs-3 col-xs-offset-1">
           <label for="insurance">Insurance:</label>
-          <input type="insurance" class="form-control" id="insurance">        
+          <input type="insurance" class="form-control" id="insurance"/>        
         </div>
         <div class="form-group col-xs-offset-1 col-xs-1">
           <label for="reset">Reset</label>
           <button type="reset" class="btn btn-default">Reset</button>
         </div> 
       </form>
-
     </div>
   </div>
 
@@ -41,7 +40,6 @@ const Results = props => (
     </div>
 
     <div class="col-xs-9">
-      
       <form class="form-inline text-center" action="/action_page.php">
         <div class="form-group col-xs-3">
           <label for="rating">Rating:</label>   
@@ -64,32 +62,31 @@ const Results = props => (
             </select>
         </div>
         <div class="form-group col-xs-3">
-                <label for="docName">Doctor's Name:</label>
-                <input type="docName" class="form-control" id="docName">
+          <label for="docName">Doctor's Name:</label>
+          <input type="docName" class="form-control" id="docName"/>
         </div>
         <div class="form-group col-xs-offset-1 col-xs-1">
           <label for="reset">Reset</label>
           <button type="reset" class="btn btn-default">Reset</button>
         </div> 
-      </form>
-    </div>
+    </form>
   </div>
 
   <div class="row" id="found">
 
-   <div class="container text-center">
+    <div class="container text-center">
       <h2>Here Are The Doctors We Found</h2>
     </div>  
     <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
         
-        <!-- Indicators -->
+        {/* <!-- Indicators --> */}
          <ol class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
           <li data-target="#myCarousel" data-slide-to="2"></li>
         </ol>
 
-        <!-- Wrapper for slides -->
+        {/* <!-- Wrapper for slides --> */}
         <div class="carousel-inner jumbotron" width="460" height="345">
 
           <div class="item active">
@@ -101,8 +98,9 @@ const Results = props => (
           </div>
         </div>
 
-        <!-- Left and right controls -->
-<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        {/* <!-- Left and right controls --> */}
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left"></span>
           <span class="sr-only">Previous</span>
         </a>
@@ -119,3 +117,5 @@ const Results = props => (
 
 
 )
+
+export default Results;

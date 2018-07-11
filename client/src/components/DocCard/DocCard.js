@@ -1,10 +1,10 @@
 import React from "react";
 import "./DocCard.css";
 
-const Results = props =>(
+const DocCard = props =>(
 
 <div class="card col-xs-3">
-  <img class="card-img-top col-xs-8 col-xs-offset-2" src="https://images8.alphacoders.com/712/712496.jpg" alt="image" style="width:150px;height: 150px;">
+  <img class="card-img-top col-xs-8 col-xs-offset-2" src="https://images8.alphacoders.com/712/712496.jpg" alt="image" style="width:150px;height: 150px;"/>
   <div class="card-body text-center col-xs-12">
     <span class="fa fa-star"></span>
     <span class="fa fa-star"></span>
