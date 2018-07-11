@@ -18,8 +18,8 @@ class Sidebar extends Component {
         <a className="align-left">
           <span className="glyphicon glyphicon-th pull-left" aria-hidden="true" onClick={this.openNav}  />
         </a>
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onClick={this.closeNav}>&times;</a>
+        <div id="mySidenav" className="sidenav">
+          <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav}>&times;</a>
           <a href="#">About</a>
           <a href="#">Services</a>
           <a href="#">Clients</a>

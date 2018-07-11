@@ -2,12 +2,12 @@ import React from "react";
 import "./Nav.css";
 
 const Nav = props => (
-<nav class="navbar">
-	<div class="container-fluid">
-	<h1 class="text-center">
+<nav className="navbar">
+	<div className="container-fluid">
+	<h1 className="text-center">
 	    {props.sidebar}
 
-	      <a><strong class="text-center">{props.title}</strong></a>
+	      <a><strong className="text-center">{props.title}</strong></a>
 
 	    {props.prompt}  	
 	</h1>
