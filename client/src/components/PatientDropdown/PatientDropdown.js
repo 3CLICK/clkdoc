@@ -1,7 +1,7 @@
 import React from "react";
-import "./PatientDropDown.css";
+import "./PatientDropdown.css";
 
-const PatientDropDown = props => (
+const PatientDropdown = props => (
 
   <div class="btn-group pull-right">
     <a class="dropdown-toggle" data-toggle="dropdown">
@@ -14,5 +14,6 @@ const PatientDropDown = props => (
       <li><a href="#">Sign Out</a></li>
     </ul>
   </div>
+);
 
-export default PatientDropDown;
+export default PatientDropdown;

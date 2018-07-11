@@ -1,12 +1,12 @@
 import React from "react";
-import "./DocDropDown.css";
+import "./DocDropdown.css";
 
-const DocDropDown = props => (
+const DocDropdown = props => (
 
   <div class="btn-group pull-right">
-    <a class="dropdown-toggle" data-toggle="dropdown">
+    <button class="dropdown-toggle" data-toggle="dropdown">
       <h6>Melvin</h6>
-    </a>
+    </button>
     <ul class="dropdown-menu" aria-labelle dby="dropdownMenuDivider">
       <li><a href="#">My Profile</a></li>
       <li><a href="#">My Availability</a></li>
@@ -15,5 +15,6 @@ const DocDropDown = props => (
       <li><a href="#">Sign Out</a></li>
     </ul>
   </div>
+);
 
-export default DocDropDown;
+export default DocDropdown;
