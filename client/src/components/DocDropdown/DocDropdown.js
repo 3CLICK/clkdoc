@@ -7,7 +7,7 @@ const DocDropdown = props => (
     <button class="dropdown-toggle" data-toggle="dropdown">
       <h6>Melvin</h6>
     </button>
-    <ul class="dropdown-menu" aria-label dby="dropdownMenuDivider">
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
       <li><a href="#">My Profile</a></li>
       <li><a href="#">My Availability</a></li>
       <li><a href="#">My Account</a></li>

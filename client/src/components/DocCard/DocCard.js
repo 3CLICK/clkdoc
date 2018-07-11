@@ -18,7 +18,7 @@ const DocCard = props =>(
       {/*Need if/else function. Sign-in modal, view doc profile otherwise*/}
   </div>
 </div>
-)
+);
 
 
 

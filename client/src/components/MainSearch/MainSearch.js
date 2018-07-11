@@ -1,6 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 import "./MainSearch.css";
-const MainSearch = props => (
+
+// const MainSearch = props => (
+
+class MainSearch extends Component {
+
+      render() {
+      return (
+
 <div class="container">
   
   <div class="jumbotron">
@@ -40,5 +47,7 @@ const MainSearch = props => (
   </div>
 </div>
 );
+    };
+  };
 
 export default MainSearch;
