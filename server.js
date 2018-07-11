@@ -1,7 +1,8 @@
 const express = require("express");
-// const passport = require("passport");
+const session = require("express-session");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const MongoStore = require('connect-mongo')(session);
 const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -28,7 +29,14 @@ mongoose.connect((prodURL || devURL),
       console.log(`Connected to: ${database.name}`);
     }
   });
-
+app.use(session({
+  secret: "1234abcd5678ef",
+  resave: false,
+  rolling: true,
+  cookie: {maxAge: 900000},
+  store: new MongoStore({ mongooseConnection: mongoose.connection }),
+  saveUninitialized: false
+}))
 // Start the API server
 app.listen(PORT, () => {
   console.log(`🌎  ==> API Server now listening on PORT http://localhost:${PORT}`);
