@@ -12,8 +12,8 @@ class MainPage extends Component {
 
   render() {
     return (
-      <div class="container">
-        <Nav title="ClkDoc" sidebar={<Sidebar/>}/>
+      <div>
+        <Nav title="ClkDoc" sidebar={<Sidebar/>} prompt={<GuestDropdown/>}/>
 
             
             
