@@ -185,17 +185,25 @@ const populateUsers = (userList) => {
 }
 
 async function getUserByUserName(username) {
-  let user = await User.findOne({ userName: username }, "_id");
-  console.log(user);
+  let user = await User.findOne({ userName: username });
   return user;
 }
 
 function createAppt(appt) {
+  const doctor = getUserByUserName(appt.doctor);
+  console.log("Doctor:\n",doctor);
+  const client = getUserByUserName(appt.client);
+  console.log("Client:\n",client);
 
-  let newAppt = new Appointment(
+
+  const newAppt = new Appointment(
     {
-      _docID: getUserByUserName(appt.doctor),
-      _clientID: getUserByUserName(appt.client),
+      _docID: doctor._id,
+      doctorFirstName: doctor.firstName,
+      doctorLastName: doctor.lastName,
+      _clientID: client._id,
+      clientFirstName: client.firstName,
+      clientLastName: client.lastName,
       start: new Date(appt.start),
     });
     console.log(newAppt);
@@ -218,8 +226,9 @@ const populateAppt = (appts) => {
 }
 
 function plantSeeds() {
-  populateUsers(users)
-  populateAppt(appointments);
+  populateUsers(users);
+  // populateAppt(appointments);
+  // getUserByUserName('ndiaz');
 }
 
 plantSeeds();
