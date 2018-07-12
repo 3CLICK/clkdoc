@@ -4,5 +4,5 @@ module.exports = {
   // clientController: require("./clientController"),
   appointmentController: require("./appointmentController"),
   loginController: require('./loginController'),
-  logoutController: require('./logoutController')
+  logoutController: require('./logoutController'),
 };
