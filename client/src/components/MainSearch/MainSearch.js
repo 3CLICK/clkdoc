@@ -11,31 +11,28 @@ class MainSearch extends Component {
     insurance: "",
   };
 
-    componentDidMount() {
-    console.log('I was triggered during componentDidMount');
-    console.log(`${this.state}`)
-  }
   handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
-    const { name, value } = event.target;
+    const { name, Value } = event.target;
     
     //Updating the input's state
     this.setState({
-      [name]: value
+      [name]: Value
     });
   };
 
   handleFormSubmit = event => {
     //Preventing the defautl behavior of the form submit (which is to refresh the page)
     event.preventDefault();
+
+    // ALert teh user their zipcode, specialty, and insurance, clearing the inputs
     this.setState({
-      zipCode: "",
-      specialty: "",
-      insurance: "",
+      zipCode: this.state.zipCode,
+      specialty: this.state.specialty,
+      insurance: this.state.insurance,
     });
-    console.log(`${this.state}`)
     //I NEED A FUNCTION TO LOAD THE NEXT PAGE, USING THE SAME INFORMATION WE JUST PASSED INTO THE STATE
-    alert(`The information you entered is as follows: ${this.state.zipCode} ${this.state.specialty} ${this.state.insurance}`);
+    
   };
 
   render() {
@@ -49,7 +46,7 @@ class MainSearch extends Component {
           </div>
           
           <div className="row">
-              <form className="form form-inline text-center" action="/action_page.php">
+              <form className="form form-inline text-center">
                 
                 <div className="form-group col-xs-3 col-xs-offset-1">
                   <label>Zip Code:</label>
@@ -57,6 +54,7 @@ class MainSearch extends Component {
                     Value={this.state.zipCode}
                     name="zipCode"
                     onChange={this.state.handleInputChange}
+                    type="text"
                     placeholder="i.e. 33055" 
                     className="form-control">
                   </input>
@@ -68,6 +66,7 @@ class MainSearch extends Component {
                    Value={this.state.specialty}
                    name="specialty"
                    onChange={this.state.handleInputChange}
+                   type="text"
                    placeholder="i.e. Cardiology"
                    className="form-control">
                    </input>
@@ -79,12 +78,13 @@ class MainSearch extends Component {
                     Value={this.state.insurance}
                     name="insurance" 
                     onChange={this.state.handleInputChange} 
+                    type="text"
                     placeholder="i.e Aetna"
                     className="form-control">
                     </input>
                 </div>
                 
-                <button type="submit" onClick={this.handleFormSubmit} className="btn btn-default col-xs-1 col-xs-offset-1 form-group">Submit</button>
+                <button onClick={this.handleFormSubmit} className="btn btn-default col-xs-1 col-xs-offset-1 form-group">Submit</button>
               </form>
 
           </div>
