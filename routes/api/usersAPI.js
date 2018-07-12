@@ -11,4 +11,8 @@ router
   .put(userController.update)
   .delete(userController.remove);
 
+router
+  .route("/getSessionId")
+  .get(userController.getSessionId)
+
 module.exports = router;
