@@ -14,7 +14,7 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: (req, res) => {
-    Appointment.create(req.body) 
+    Appointment.create(req.body)
       .then(data => res.json(data))
       .catch(err => res.status(422).json(err));
   },

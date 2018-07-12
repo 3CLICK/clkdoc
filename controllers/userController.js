@@ -28,8 +28,5 @@ module.exports = {
       .then(data => data.remove())
       .then(data => res.json(data))
       .catch(err => res.status(422).json(err));
-  },
-  getSessionId: (req,res) => {
-    res.send(req.session.uId)
   }
 };
