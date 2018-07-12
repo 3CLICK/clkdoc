@@ -36,7 +36,7 @@ app.use(session({
   cookie: {maxAge: 900000},
   store: new MongoStore({ mongooseConnection: mongoose.connection }),
   saveUninitialized: false
-}))
+}));
 // Start the API server
 app.listen(PORT, () => {
   console.log(`🌎  ==> API Server now listening on PORT http://localhost:${PORT}`);
