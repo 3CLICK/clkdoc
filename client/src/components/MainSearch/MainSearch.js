@@ -12,25 +12,18 @@ class MainSearch extends Component {
   };
 
   handleInputChange = event => {
-    // Getting the value and name of the input which triggered the change
-    const { name, Value } = event.target;
-    
+
     //Updating the input's state
     this.setState({
-      [name]: Value
+      [event.target.name]: event.target.value
     });
   };
 
   handleFormSubmit = event => {
     //Preventing the defautl behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-
-    // ALert teh user their zipcode, specialty, and insurance, clearing the inputs
-    this.setState({
-      zipCode: this.state.zipCode,
-      specialty: this.state.specialty,
-      insurance: this.state.insurance,
-    });
+    console.log(this.state);
+    
     //I NEED A FUNCTION TO LOAD THE NEXT PAGE, USING THE SAME INFORMATION WE JUST PASSED INTO THE STATE
     
   };
@@ -53,7 +46,7 @@ class MainSearch extends Component {
                   <input 
                     Value={this.state.zipCode}
                     name="zipCode"
-                    onChange={this.state.handleInputChange}
+                    onChange={this.handleInputChange}
                     type="text"
                     placeholder="i.e. 33055" 
                     className="form-control">
@@ -65,7 +58,7 @@ class MainSearch extends Component {
                   <input
                    Value={this.state.specialty}
                    name="specialty"
-                   onChange={this.state.handleInputChange}
+                   onChange={this.handleInputChange}
                    type="text"
                    placeholder="i.e. Cardiology"
                    className="form-control">
@@ -77,7 +70,7 @@ class MainSearch extends Component {
                   <input
                     Value={this.state.insurance}
                     name="insurance" 
-                    onChange={this.state.handleInputChange} 
+                    onChange={(e) => this.handleInputChange(e)} 
                     type="text"
                     placeholder="i.e Aetna"
                     className="form-control">

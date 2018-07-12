@@ -12,37 +12,55 @@ class Results extends Component {
               <h2>Results For:</h2>
             </div>
 
-            <div class="row">
-              <form class="form-inline text-center" action="/action_page.php">
+            <div class="col-xs-9">
+              <form className="form form-inline text-center">
+                
+                <div className="form-group col-xs-3">
+                  <label>Zip Code:</label>
+                  <input 
 
-                <div class="form-group col-xs-2">
-                  <label htmlFor="zip">Zip Code:</label>
-                  <input type="zip" class="form-control" id="zip" />
+                    type="text"
+                    placeholder="i.e. 33055" 
+                    className="form-control">
+                  </input>
+                </div>
+                
+                <div className="form-group col-xs-3">
+                  <label>Specialty:</label>
+                  <input
+
+                   type="text"
+                   placeholder="i.e. Cardiology"
+                   className="form-control">
+                   </input>
+                </div>
+                
+                <div className="form-group col-xs-3">
+                  <label>Insurance:</label>
+                  <input
+
+                    type="text"
+                    placeholder="i.e Aetna"
+                    className="form-control">
+                    </input>
                 </div>
 
-                <div class="form-group col-xs-2">
-                  <label htmlFor="specialty">Specialty:</label>
-                  <input type="specialty" class="form-control" id="specialty" />
+                <div className="form-group col-xs-2 col-xs-offset-1">
+                  <button onClick={this.handleFormSubmit} className="btn btn-default col-xs-6 form-group">Submit</button>
+                  <button onClick="" className="btn btn-default col-xs-6 form-group">Reset</button>
                 </div>
-
-                <div class="form-group col-xs-2">
-                  <label htmlFor="insurance">Insurance:</label>
-                  <input type="insurance" class="form-control" id="insurance" />        
-                </div>
-
-                <div class="form-group col-xs-1">
-                  <label htmlFor="reset">Reset</label>
-                  <button type="reset" class="btn btn-default">Reset</button>
-                </div> 
               </form>
 
             </div>
           </div>
 
-          <div class="row">
+          <div class="row col-xs-12">
+
+
             <div class="col-xs-3" id="filterLabel">
               <h2>Filter By:</h2>
             </div>
+
             <div class="col-xs-9">
               <form class="form-inline text-center" action="/action_page.php">
                 <div class="form-group col-xs-3">
@@ -80,7 +98,7 @@ class Results extends Component {
             <div class="container text-center">
               <h2>Here Are The Doctors We Found</h2>
             </div>  
-            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+{/*            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
               <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to={0} class="active" />
                 <li data-target="#myCarousel" data-slide-to={1} />
@@ -102,7 +120,7 @@ class Results extends Component {
                 <span class="glyphicon glyphicon-chevron-right" />
                 <span class="sr-only">Next</span>
               </a>
-            </div>
+            </div>*/}
           </div>
         </div>
         );
