@@ -9,9 +9,10 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findById: (req, res) => {
-    User.findById(req.params.id)
-      .then(data => res.json(data))
-      .catch(err => res.status(422).json(err));
+     User.findById(req.session.uId)
+       .then(data => res.json(data))
+       .catch(err => res.status(422).json(err));
+    // res.send("doctor")
   },
   create: (req, res) => {
     createUser(req.body, (mes) => {
