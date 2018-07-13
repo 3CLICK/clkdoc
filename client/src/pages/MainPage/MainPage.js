@@ -14,9 +14,9 @@ class MainPage extends Component {
 		API.getUser()
 		.then(user => {
 			console.log(user)
-			if(user == 'doctor'){
+			if(user === 'doctor'){
 			return <DocDropdown />
-		} else if( user == 'patient') {
+		} else if( user === 'patient') {
 			return <PatientDropdown />
 		} else return <GuestDropdown />
 		})
