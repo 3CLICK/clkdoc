@@ -9,6 +9,10 @@ export default {
   getUser: function() {
     return axios.get("/api/users/id");
   },
+  // 
+  getDoctors: function() {
+    return axios.get("/api/users/?userType=Doctor");
+  },
   // Deletes the User with the given id
   deleteUser: function(id) {
     return axios.delete("/api/users/"+ id);
