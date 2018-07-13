@@ -34,8 +34,11 @@ const Profile = new Schema({
     name: String,
     phone: Number,
   },
+  description: [String],
+  npi: Number, 
   allergies: [String],
   reason_for_visit: String
+  
 });
 
 module.exports = Profile;
