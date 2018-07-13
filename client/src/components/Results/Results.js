@@ -12,16 +12,11 @@ class Results extends Component {
       render() {
       return (
         <div class="container">
-          
-          <div class="row col-xs-12">
-            <div class="col-xs-3" id="resultLabel">
-              <h2>Results For:</h2>
-            </div>
-
-            <div class="col-xs-9">
-              <form className="form form-inline text-center">
-                
-                <div className="form-group col-xs-3">
+          <form className="form form-inline col-xs-12 pull-right" id="resultRow" >
+                <div className="form-group">
+                <h3 class="pull-left" id="resultLabel">RESULTS FOR:</h3>
+                </div>
+                <div className="form-group">
                   <label>Zip Code:</label>
                   <input 
                     Value={this.state.zipCode}
@@ -32,7 +27,7 @@ class Results extends Component {
                     className="form-control"/>
                 </div>
                 
-                <div className="form-group col-xs-3">
+                <div className="form-group">
                   <label>Specialty:</label>
                   <input
                    Value={this.state.specialty}
@@ -43,7 +38,7 @@ class Results extends Component {
                    className="form-control"/>
                 </div>
                 
-                <div className="form-group col-xs-3">
+                <div className="form-group">
                   <label>Insurance:</label>
                   <input
                     Value={this.state.insurance}
@@ -54,16 +49,10 @@ class Results extends Component {
                     className="form-control"/>
                 </div>
 
-                <div className="form-group col-xs-2 col-xs-offset-1">
-                  <button onClick={this.handleFormSubmit} className="btn btn-default col-xs-6 form-group">Submit</button>
-                  <button onClick="" className="btn btn-default col-xs-6 form-group">Reset</button>
-                </div>
-              </form>
-
-            </div>
-          </div>
-
-          <div class="row col-xs-12">
+                  <button onClick={this.handleFormSubmit} className="btn btn-default form-inline ">Submit</button>
+                  <button onClick="" className="btn btn-default form-inline ">Reset</button>
+          </form>
+     
 
 
             <div class="col-xs-3" id="filterLabel">
@@ -71,7 +60,7 @@ class Results extends Component {
             </div>
 
             <div class="col-xs-9">
-              <form class="form-inline text-center" action="/action_page.php">
+              <form className="form form-inline col-xs-12 pull-right">
                 <div class="form-group col-xs-3">
                   <label htmlFor="rating">Rating:</label>   
                   <select name="Rating">
@@ -102,7 +91,8 @@ class Results extends Component {
                 </div> 
               </form>
             </div>
-          </div>
+
+
           <div class="row">
             <div class="container text-center">
               <h2>Here Are The Doctors We Found</h2>
