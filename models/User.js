@@ -6,7 +6,8 @@ const user = new Schema({
   userName: { 
     type: String,
     required: "UserName is required",
-    unique: true
+    unique: true,
+    trim:true
   },
   firstName: {
     type: String, 
@@ -30,7 +31,8 @@ const user = new Schema({
     type: String,
     required: "Password is required",
     trim: true,
-    minlength: 6 },
+    minlength: 6 
+  },
   dateCreated: {
     type: Date, 
     required: true,
