@@ -7,7 +7,7 @@ const Nav = props => (
 	<h1 className="text-center">
 	    {props.sidebar}
 
-	      <a><strong className="text-center">{props.title}</strong></a>
+	      <a><strong className="text-center">{props.user === 'doctor'?'doctor':'Patient'}</strong></a>
 
 	    {props.prompt}  	
 	</h1>

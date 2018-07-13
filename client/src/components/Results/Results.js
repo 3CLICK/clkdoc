@@ -2,7 +2,13 @@ import React, { Component } from "react";
 import "./Results.css";
 
 class Results extends Component {
+    state = {
+    zipCode: "",
+    specialty: "",
+    insurance: "",
+  };
 
+  
       render() {
       return (
         <div class="container">
@@ -18,31 +24,34 @@ class Results extends Component {
                 <div className="form-group col-xs-3">
                   <label>Zip Code:</label>
                   <input 
-
+                    Value={this.state.zipCode}
+                    name="zipCode"
+                    onChange={this.handleInputChange}
                     type="text"
                     placeholder="i.e. 33055" 
-                    className="form-control">
-                  </input>
+                    className="form-control"/>
                 </div>
                 
                 <div className="form-group col-xs-3">
                   <label>Specialty:</label>
                   <input
-
+                   Value={this.state.specialty}
+                   name="specialty"
+                   onChange={this.handleInputChange}
                    type="text"
                    placeholder="i.e. Cardiology"
-                   className="form-control">
-                   </input>
+                   className="form-control"/>
                 </div>
                 
                 <div className="form-group col-xs-3">
                   <label>Insurance:</label>
                   <input
-
+                    Value={this.state.insurance}
+                    name="insurance" 
+                    onChange={(e) => this.handleInputChange(e)} 
                     type="text"
                     placeholder="i.e Aetna"
-                    className="form-control">
-                    </input>
+                    className="form-control"/>
                 </div>
 
                 <div className="form-group col-xs-2 col-xs-offset-1">
@@ -94,7 +103,7 @@ class Results extends Component {
               </form>
             </div>
           </div>
-          <div class="row" id="found">
+          <div class="row">
             <div class="container text-center">
               <h2>Here Are The Doctors We Found</h2>
             </div>  
@@ -121,6 +130,11 @@ class Results extends Component {
                 <span class="sr-only">Next</span>
               </a>
             </div>*/}
+            <div class="row" id="found">
+              <div className="container">
+                <p className="text-center">Need to map out the DocCards here</p>
+              </div>
+            </div>
           </div>
         </div>
         );

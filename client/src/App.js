@@ -4,6 +4,6 @@ import DocResults from "./pages/DocResults/DocResults.js";
 import DocAvailability from "./pages/DocAvailability/DocAvailability.js";
 
 
-const App = () => ( <DocResults /> );
+const App = () => ( <MainPage /> );
 
 export default App;
