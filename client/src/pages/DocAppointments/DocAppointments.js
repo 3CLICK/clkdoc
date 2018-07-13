@@ -7,11 +7,12 @@ import DocDropdown from "../../components/DocDropdown";
 import PatientDropdown from "../../components/PatientDropdown";
 import GuestDropdown from "../../components/GuestDropdown";
 import DocBanner from "../../components/DocBanner";
-import AppointmentCard from "../../components/AppointmentCard";
+// import AppointmentCard from "../../components/AppointmentCard";
+import DocAppointments from "../../components/DocAppointmentCard";
 
 
 
-class DocAvailability extends Component {
+class DocAppointments extends Component {
 
   render() {
     return (
@@ -19,7 +20,7 @@ class DocAvailability extends Component {
         <Nav title="ClkDoc" sidebar={<Sidebar/>} prompt={<GuestDropdown/>}/>
         <DocBanner />
         {/*NEED mapping function so that Apointment card below only appears if there are available appointments for the given doctor*/}
-        <AppointmentCard />
+        <DocAppointmentCard />
             
             
         <Footer/>
@@ -30,4 +31,4 @@ class DocAvailability extends Component {
 
 };
 
-export default DocAvailability;
+export default DocAppointments;
