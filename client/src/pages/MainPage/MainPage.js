@@ -3,6 +3,7 @@ import Nav from "../../components/Nav";
 import MainSearch from "../../components/MainSearch";
 import Footer from "../../components/Footer";
 import Sidebar from "../../components/Sidebar";
+import GuestDropdown from "../../components/GuestDropdown";
 
 
 class MainPage extends Component {
@@ -10,7 +11,7 @@ class MainPage extends Component {
   render() {
     return (
       <div>
-				<Nav title="ClkDoc" user="doctor" sidebar={<Sidebar />}/>
+				<Nav prompt={<GuestDropdown />} sidebar={<Sidebar />}/>
         <MainSearch />
         <Footer/>
       </div>
