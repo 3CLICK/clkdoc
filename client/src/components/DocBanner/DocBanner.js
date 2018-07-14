@@ -5,7 +5,7 @@ import "./DocBanner.css";
 class DocBanner extends Component { 
   constructor(props) {
     super(props);
-    API.getDoctors("5b492f4d61b99e3b02aff8a4").then(data => this.setState({doctor:data}))
+    API.getDoctors().then(data => this.setState({doctor:data}))
   };
 
   state = {

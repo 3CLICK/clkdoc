@@ -1,16 +1,25 @@
 import React, { Component } from "react";
-import Footer from "../../components/Footer";
 import Results from "../../components/Results";
-import DocCard from "../../components/DocCard";
+import API from '../../utils/API';
+
 
 
 class DocResults extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      doctors: []
+    };
+    API.getDoctors().then(response => this.setState({ doctors: response.data }))
+  };
+
 
   render() {
     return (
       <div>
         <Results />
         <DocCard />
+
       </div>
     );
   };
