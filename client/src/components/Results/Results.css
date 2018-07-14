@@ -1,0 +1,44 @@
+#resultRow{
+	border-width: 2px;
+	border-style: solid;
+	border-color: gray;
+}
+
+#resultLabel{
+	border-right-width: 2px;
+	border-right-style: solid;
+	border-right-color: gray;
+	margin-right: 27%;
+	padding-bottom: 1%;
+	padding-top:1%;
+
+}
+
+#filterRow{
+	border-width: 2px;
+	border-style: solid;
+	border-color: #54c0ff;
+	margin-top: 1%;
+}
+
+#filterLabel{
+	border-right-width: 2px;
+	border-right-style: solid;
+	border-right-color: #54c0ff;
+	padding-bottom: 1%;
+	padding-top:1%;
+	padding-right: 5%;
+}
+
+label{
+	display:block;
+}
+button {
+	margin-right: 2px;
+}
+
+.form-group{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
