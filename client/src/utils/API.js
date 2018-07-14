@@ -12,6 +12,10 @@ export default {
   getSelf: function () {
     return axios.get(`/api/users`);
   },
+   // Gets the book with the given id
+  getDoctor: function(id) {
+    return axios.get(`/api/doctors/${id}`);
+  },
   // Get all doctors
   getDoctors: function() {
     return axios.get("/api/users/?userType=Doctor");

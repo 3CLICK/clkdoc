@@ -101,13 +101,8 @@ class Results extends Component {
           </div>
 
           <div id="cardHolder" class="container">
-            <DocCard/>
-            <DocCard/>
-            <DocCard/>
-            <DocCard/>
-                        <DocCard/>
+            {/*need to map out DocCards here*/}
 
-            <DocCard/>
 
           </div>
 
