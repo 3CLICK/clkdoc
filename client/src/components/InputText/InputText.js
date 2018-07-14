@@ -21,6 +21,8 @@ class InputText extends React.Component {
 			<div className="form-group">
 				<label for={compId}>{label}</label>
 				<input
+					minLength={4}
+					maxLength={50}
 					id={compId}
 					key={key}
 					className="form-control"
