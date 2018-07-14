@@ -1,6 +1,7 @@
 .container{
     width: 80%;
     position: relative;
+    opacity: .9;
 }
 
 .jumbotron{
@@ -10,4 +11,8 @@
     margin-bottom: 20%;
     position: sticky;
     background-color: #ffffff;
+}
+
+.clkPic{
+	align-content: center;
 }

@@ -35,13 +35,14 @@ class MainSearch extends Component {
         
         <div className="jumbotron">
           <div className="row">  
-            <h2 className="text-center"> Welcome to clkDoc! </h2>
+            <img className="col-xs-offset-4" src={require(`./images/logo.png`)
+            } />
           </div>
           
           <div className="row">
               <form className="form form-inline text-center">
                 
-                <div className="form-group col-xs-3 col-xs-offset-1">
+                <div className="form-group">
                   <label>Zip Code:</label>
                   <input 
                     Value={this.state.zipCode}
@@ -53,7 +54,7 @@ class MainSearch extends Component {
                   </input>
                 </div>
                 
-                <div className="form-group col-xs-3">
+                <div className="form-group">
                   <label>Specialty:</label>
                   <input
                    Value={this.state.specialty}
@@ -65,7 +66,7 @@ class MainSearch extends Component {
                    </input>
                 </div>
                 
-                <div className="form-group col-xs-3">
+                <div className="form-group">
                   <label>Insurance:</label>
                   <input
                     Value={this.state.insurance}
@@ -77,14 +78,14 @@ class MainSearch extends Component {
                     </input>
                 </div>
                 
-                <button onClick={this.handleFormSubmit} className="btn btn-default col-xs-1 col-xs-offset-1 form-group">Submit</button>
+                <button onClick={this.handleFormSubmit} className="btn btn-default form-group">Submit</button>
               </form>
 
           </div>
 
           <div className="row">
             <p className="text-center col-xs-offset-2 col-xs-8">
-              Start getting your medical appointmnet right now by selecting your zip code, insurance company (or pay option), and the specialist you need for , then click the Arrow to get the nearest specialist who accepts your insurance.
+              Welcome to clkDoc. Start getting your medical appointment right now by selecting your zip code, insurance copmany (or pay option) and the specialist you need, then click the Submit button to get the nearest specialist who accepts your insurance.
             </p>
           </div>
 
