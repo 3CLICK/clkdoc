@@ -17,7 +17,9 @@ class DocResults extends Component {
   render() {
     return (
       <div>
-        <Results results={this.state.doctors} />
+        <Results />
+        <DocCard />
+
       </div>
     );
   };

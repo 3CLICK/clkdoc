@@ -30,7 +30,7 @@ class Nav extends Component {
 						<Sidebar/>
 						<a>
 							<strong className="text-center">
-								{this.props.prompt}
+								clkDoc
 							</strong>
 						</a>
 						{dropDown}

@@ -44,7 +44,7 @@ class DocBanner extends Component {
 
               <div className="col-xs-6" id="docDescription">
                 <div className="row">
-                  <p> test</p>
+                  <p> Robert Ayala is an excellent cardiologist, having been practicing in his field for the last 20 years. He is as well versed in his field as he is courteous, calm, and collected with his patients.</p>
                 </div>
               </div>
       </div>
