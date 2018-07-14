@@ -7,7 +7,7 @@ class InputText extends React.Component {
 	}
 
 	handleChange(event) {
-		this.props.onTextChange(event.target.value);
+		this.props.onTextChange(event.target);
 	}
 
 	render() {
@@ -21,6 +21,9 @@ class InputText extends React.Component {
 			<div className="form-group">
 				<label for={compId}>{label}</label>
 				<input
+					minLength={4}
+					maxLength={50}
+					id={compId}
 					key={key}
 					className="form-control"
 					type={type}
