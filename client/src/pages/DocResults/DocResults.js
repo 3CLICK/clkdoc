@@ -9,7 +9,8 @@ class DocResults extends Component {
   render() {
     return (
       <div>
-        <Results doc={<DocCard />} />
+        <Results />
+        <DocCard />
       </div>
     );
   };

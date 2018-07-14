@@ -35,7 +35,7 @@ class MainSearch extends Component {
         
         <div className="jumbotron">
           <div className="row">  
-            <img className="col-xs-offset-4" src={require(`./images/logo.png`)
+            <img className="col-xs-offset-5" src={require(`./images/logo.png`) 
             } />
           </div>
           
