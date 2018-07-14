@@ -107,7 +107,7 @@ const users = [
       insurance: "PPO",
       npi: "1649234147",
       description: "Dr. Rafael Barrial, MD, specialist in geriatric medicine and internal medicine, currently practices medicine at Miami, Florida.\n\nDr. Barrial is licensed to practice medicine at Florida.\n\nDr. Barrial has successfully passed a background check including a medical license verification (active) and screening for malpractice history (none found).",
-      images: "https://asset3.betterdoctor.com/assets/general_doctor_male.png"
+      images: "https://image.flaticon.com/icons/svg/194/194915.svg"
     }
   },
   {
@@ -129,7 +129,7 @@ const users = [
       insurance: "PPO",
       npi: "1477511491",
       description: "Dr. Kurt Friedman, DDS DDSMS, specialist in dentistry and oral & maxillofacial surgery, currently sees patients in Miami, Florida, Coral springs, Florida, Plantation, Florida, Miami beach, Florida, Hollywood, Florida, and Pembroke pines, Florida.\n\nDr. Friedman is licensed to see patients in Florida.\n\nIn addition to having active medical licenses, Dr. Friedman has passed an automated background check which looked at elements including medical license status and malpractice screening (no history found).",
-      images: "https://asset3.betterdoctor.com/assets/general_doctor_male.png"
+      images: "https://image.flaticon.com/icons/svg/194/194927.svg"
     }
   },
   {
@@ -151,7 +151,7 @@ const users = [
       insurance: "PPO",
       npi: "1780633875",
       description: "Dr. Joseph Gutman, MD, specialist in endocrinology, diabetes & metabolism and internal medicine, currently practices medicine at Miami, Florida, Hialeah, Florida, Miami beach, Florida, Aventura, Florida, and Santa monica, California.\n\nDr. Gutman received his medical degree from College Mayor De Nuestro Senora Del Rosario, Fac De Med and is licensed to see patients in Florida.\n\nIn addition to having active medical licenses, Dr. Gutman has passed an automated background check which looked at elements including medical license status and malpractice screening (no history found).",
-      images: "https://asset3.betterdoctor.com/assets/general_doctor_male.png"
+      images: "https://image.flaticon.com/icons/svg/194/194921.svg"
     }
   }
 ];
