@@ -107,8 +107,8 @@ const users = [
       insurance: "PPO",
       npi: "1649234147",
       description: "Dr. Rafael Barrial, MD, specialist in geriatric medicine and internal medicine, currently practices medicine at Miami, Florida.\n\nDr. Barrial is licensed to practice medicine at Florida.\n\nDr. Barrial has successfully passed a background check including a medical license verification (active) and screening for malpractice history (none found).",
-      images: "https://image.flaticon.com/icons/svg/194/194915.svg"
-    }
+    },
+    image: "https://image.flaticon.com/icons/svg/194/194915.svg"
   },
   {
     userName: "Kurt",
@@ -118,6 +118,7 @@ const users = [
     email: "kfriedman@gmail.com",
     password: "123456",
     userType: "Doctor",
+    image: "https://image.flaticon.com/icons/svg/194/194927.svg",
     profile: {
       ssn: 111222777,
       specialty: "Oral & Maxillofacial Surgery",
@@ -128,8 +129,7 @@ const users = [
       phoneNumber: "3055757000",
       insurance: "PPO",
       npi: "1477511491",
-      description: "Dr. Kurt Friedman, DDS DDSMS, specialist in dentistry and oral & maxillofacial surgery, currently sees patients in Miami, Florida, Coral springs, Florida, Plantation, Florida, Miami beach, Florida, Hollywood, Florida, and Pembroke pines, Florida.\n\nDr. Friedman is licensed to see patients in Florida.\n\nIn addition to having active medical licenses, Dr. Friedman has passed an automated background check which looked at elements including medical license status and malpractice screening (no history found).",
-      images: "https://image.flaticon.com/icons/svg/194/194927.svg"
+      description: "Dr. Kurt Friedman, DDS DDSMS, specialist in dentistry and oral & maxillofacial surgery, currently sees patients in Miami, Florida, Coral springs, Florida, Plantation, Florida, Miami beach, Florida, Hollywood, Florida, and Pembroke pines, Florida.\n\nDr. Friedman is licensed to see patients in Florida.\n\nIn addition to having active medical licenses, Dr. Friedman has passed an automated background check which looked at elements including medical license status and malpractice screening (no history found)."
     }
   },
   {
@@ -151,8 +151,8 @@ const users = [
       insurance: "PPO",
       npi: "1780633875",
       description: "Dr. Joseph Gutman, MD, specialist in endocrinology, diabetes & metabolism and internal medicine, currently practices medicine at Miami, Florida, Hialeah, Florida, Miami beach, Florida, Aventura, Florida, and Santa monica, California.\n\nDr. Gutman received his medical degree from College Mayor De Nuestro Senora Del Rosario, Fac De Med and is licensed to see patients in Florida.\n\nIn addition to having active medical licenses, Dr. Gutman has passed an automated background check which looked at elements including medical license status and malpractice screening (no history found).",
-      images: "https://image.flaticon.com/icons/svg/194/194921.svg"
-    }
+    },
+    image: "https://image.flaticon.com/icons/svg/194/194921.svg"
   }
 ];
 const appointments = [
@@ -197,9 +197,9 @@ async function getUserByUserName(username) {
 
 function createAppt(appt) {
   const doctor = getUserByUserName(appt.doctor);
-  console.log("Doctor:\n",doctor);
+  console.log("Doctor:\n", doctor);
   const client = getUserByUserName(appt.client);
-  console.log("Client:\n",client);
+  console.log("Client:\n", client);
 
 
   const newAppt = new Appointment(
@@ -212,7 +212,7 @@ function createAppt(appt) {
       clientLastName: client.lastName,
       start: new Date(appt.start),
     });
-    console.log(newAppt);
+  console.log(newAppt);
   newAppt.save(err => {
     if (err) {
       console.log(err)
