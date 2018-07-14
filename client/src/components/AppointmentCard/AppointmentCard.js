@@ -2,35 +2,21 @@ import React from "react";
 import "./AppointmentCard.css";
 
 const AppointmentCard = props =>
-<div class="container">
-  <div class="panel panel-default col-xs-8 col-xs-offset-2">
-      {/* <div class="panel-heading">
-          <h3>{props.date}
-            <a class="btn btn-primary save pull-right">Save Appointment</a>
-          </h3>
-      </div>
-      <div class="panel-body pull-left">
-        <ul id="menu" class="pull-left">
-          <li class="col-xs-4">Time: {props.time}</li>
-          <li class="col-xs-4">Duration: {props.duration}</li>
-          <li class="col-xs-4">Location: {props.location}</li>
-        </ul> 
-      </div> */}
 
-      <div class="panel-body pull-left">
-        <ul id="menu" class="pull-left">
-          <li class="col-xs-4">Time: {props.time}</li>
-          <li class="col-xs-4">Duration: {props.duration}</li>
-          <li class="col-xs-4">Location: {props.location}</li>
-        </ul>
-      </div>
 
-      <div class="container">
-      <h3>{props.date}
-          <a class="btn btn-primary pull-right">Save Appointment</a>
-        </h3>
-      </div>
-  </div>   
+<div class="card col-xs-6 col-xs-offset-3" id="APC">
+  <h3 class="card-header">PUT APPOINT DATE HERE</h3>
+  <div class="card-body">
+    <ul id="menu" className="pull-left">
+          <li className="col-xs-3">Time: NEED INFO</li>
+          <li className="col-xs-3">Duration: NEED INFO</li>
+          <li className="col-xs-3">Location: NEED INFO</li>
+          <li className="col-xs-3"><a className="btn btn-primary pull-right">Save Appointment</a></li>
+          
+    </ul>
+  </div>
 </div>
+
+
 
 export default AppointmentCard;

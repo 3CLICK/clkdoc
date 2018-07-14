@@ -1,3 +1,17 @@
 ul#menu li {
     display:inline;
 }
+
+#APC{
+	margin-top: 1%;
+	border-color: #54c0ff;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.card-header {
+	border-bottom-color: gray;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+
+}
