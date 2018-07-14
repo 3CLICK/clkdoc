@@ -18,7 +18,6 @@ class DocResults extends Component {
     return (
       <div>
         <Results />
-        <DocCard />
 
       </div>
     );
