@@ -20,10 +20,10 @@ class Sidebar extends Component {
         </a>
         <div id="mySidenav" className="sidenav">
           <a href="javascript:void(0)" className="closebtn" onClick={this.closeNav}>&times;</a>
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Clients</a>
-          <a href="#">Contact</a>
+          <a href="/">Home</a>
+          <a href="/doctors">Doctors</a>
+          <a href="#">Profile</a>
+          <a href="/doctors/12312312323">Make Appointment</a>
         </div>
       </div>
       )
