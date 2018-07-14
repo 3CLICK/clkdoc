@@ -16,7 +16,6 @@ class DocAvailability extends Component {
   render() {
     return (
       <div>
-        <Nav title="ClkDoc" sidebar={<Sidebar/>} prompt={<GuestDropdown/>}/>
         <DocBanner />
         {/*NEED mapping function so that Apointment card below only appears if there are available appointments for the given doctor*/}
         <AppointmentCard />
