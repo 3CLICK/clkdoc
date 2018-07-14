@@ -8,7 +8,7 @@ import PatientDropdown from "../../components/PatientDropdown";
 import GuestDropdown from "../../components/GuestDropdown";
 import DocBanner from "../../components/DocBanner";
 // import AppointmentCard from "../../components/AppointmentCard";
-import DocAppointments from "../../components/DocAppointmentCard";
+import DocAppointmentCard from "../../components/DocAppointmentCard";
 
 
 

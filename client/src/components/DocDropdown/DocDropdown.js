@@ -3,15 +3,15 @@ import "./DocDropdown.css";
 
 const DocDropdown = props => (
 
-  <div class="btn-group pull-right">
-    <button class="dropdown-toggle" data-toggle="dropdown">
+  <div className="btn-group pull-right">
+    <button className="dropdown-toggle" data-toggle="dropdown">
       <h6>Melvin</h6>
     </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
+    <ul className="dropdown-menu" aria-labelledby="dropdownMenuDivider">
       <li><a href="#">My Profile</a></li>
       <li><a href="#">My Availability</a></li>
       <li><a href="#">My Account</a></li>
-      <li role="separator" class="divider"></li>
+      <li role="separator" className="divider"></li>
       <li><a href="#">Sign Out</a></li>
     </ul>
   </div>

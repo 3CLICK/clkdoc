@@ -3,34 +3,37 @@ import "./Nav.css";
 import DocDropdown from "../../components/DocDropdown";
 import PatientDropdown from "../../components/PatientDropdown";
 import GuestDropdown from "../../components/GuestDropdown";
-import API from '../../utils/API'
+import Sidebar from "../../components/Sidebar";
+
 
 class Nav extends Component {
-	constructor(props){
-		super(props)
-		API.getUser()
-			.then(data => {
-				if (data.data == 'doctor') {
-					this.setState({ prompt: <DocDropdown/> })
-				} else if (data.data == 'patient') {
-					this.setState({ prompt: <PatientDropdown /> })
-				} else this.setState({ prompt: <GuestDropdown /> })
-			})
+	constructor(props) {
+		super(props);
+		this.state = {
+			user: this.props.user
+		}
 	}
-	
-	state = {
-		prompt: ''
-	}
-
-
 	render() {
+		// Conditional rendering
+		let dropDown;
+		if (this.props.prompt == 'Doctor') {
+			dropDown = <DocDropdown />;
+		} else if (this.props.prompt == 'Patient') {
+			dropDown = <PatientDropdown />;
+		} else dropDown = <GuestDropdown />;
+
+
 		return (
 			<nav className="navbar">
 				<div className="container-fluid">
 					<h1 className="text-center">
-						{this.props.sidebar}
-						<a><strong className="text-center">{this.props.user === 'doctor' ? 'doctor' : 'Patient'}</strong></a>
-						{this.state.prompt}
+						<Sidebar/>
+						<a>
+							<strong className="text-center">
+								{this.props.prompt}
+							</strong>
+						</a>
+						{dropDown}
 					</h1>
 				</div>
 			</nav>

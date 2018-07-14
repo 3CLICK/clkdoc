@@ -1,9 +1,8 @@
 import React from "react";
-import MainPage from "./pages/MainPage/MainPage.js";
-import DocResults from "./pages/DocResults/DocResults.js";
-import DocAvailability from "./pages/DocAvailability/DocAvailability.js";
+import Wrapper from './pages/Wrapper'
 
-
-const App = () => ( <DocResults /> );
-
+const App = () => (
+	<Wrapper />
+);
+  
 export default App;
