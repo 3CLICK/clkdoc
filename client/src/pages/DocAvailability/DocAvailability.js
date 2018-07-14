@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Nav from "../../components/Nav";
 import MainSearch from "../../components/MainSearch";
 import Footer from "../../components/Footer";
 import Sidebar from "../../components/Sidebar";
