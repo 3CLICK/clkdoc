@@ -2,6 +2,8 @@
 	border-width: 2px;
 	border-style: solid;
 	border-color: gray;
+	background-color: white;
+	opacity: 0.97;
 }
 
 #resultLabel{
@@ -12,6 +14,7 @@
 	padding-bottom: 1%;
 	padding-top:1%;
 
+
 }
 
 #filterRow{
@@ -19,6 +22,8 @@
 	border-style: solid;
 	border-color: #54c0ff;
 	margin-top: 1%;
+	background-color: white;
+	opacity: .97;
 }
 
 #filterLabel{
@@ -40,5 +45,27 @@ button {
 .form-group{
 	margin-left: 2%;
 	margin-right: 2%;
+}
+
+#rate{
+	margin-left: 7%;
+}
+
+#radius{
+	margin-left: 15%;
+}
+
+#dName{
+	margin-left: 13%;
+}
+
+#filterReset{
+	margin-left: 6%;
+}
+
+#cardHolder {
+	background-color: white;
+	margin-top: 2%;
+	opacity: .90;
 }
 

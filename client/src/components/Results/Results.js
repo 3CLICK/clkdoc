@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import DocCard from "../DocCard/DocCard.js";
 import "./Results.css";
 
 class Results extends Component {
@@ -12,7 +13,7 @@ class Results extends Component {
       render() {
       return (
         <div class="container">
-
+          <div class="row">
           <form className="form form-inline col-xs-12 pull-right" id="resultRow">
                 <div className="form-group">
                 <h3 class="pull-left" id="resultLabel">RESULTS FOR:</h3>
@@ -53,15 +54,16 @@ class Results extends Component {
                   <button onClick={this.handleFormSubmit} className="btn btn-default form-inline ">Submit</button>
                   <button onClick="" className="btn btn-default form-inline ">Reset</button>
           </form>
+          </div>
     
-
-          <form className="form-inline pull-right" id="filterRow">
+          <div class="row">
+          <form className="form-inline col-xs-12 pull-right" id="filterRow">
 
             <div className="form-group">
               <h3 class="pull-left" id="filterLabel">FILTER BY:</h3>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" id="rate">
               <label for="Rating">Rating:</label>   
                 <select nameClass="form-control">
                   <option value={1}>*</option>
@@ -72,7 +74,7 @@ class Results extends Component {
                 </select>
             </div>
 
-            <div class="form-group">
+            <div class="form-group" id="radius">
               <label>Distance:</label>   
                 <select nameClass="form-control">
                   <option value={5}>5 Miles</option>
@@ -83,7 +85,7 @@ class Results extends Component {
                 </select>
             </div>
 
-            <div className="form-group">
+            <div className="form-group" id="dName">
               <label>Doctor's Name:</label>
                 <input 
                   type="docName" 
@@ -91,11 +93,24 @@ class Results extends Component {
                   id="docName" />
             </div>
 
-            <div class="form-group">
+            <div class="form-group" id="filterReset">
                 <button type="reset" class="btn btn-default pull-right">Reset</button>
             </div>
 
           </form>
+          </div>
+
+          <div id="cardHolder" class="container">
+            <DocCard/>
+            <DocCard/>
+            <DocCard/>
+            <DocCard/>
+                        <DocCard/>
+
+            <DocCard/>
+
+          </div>
+
 
         </div>
 

@@ -1,5 +1,5 @@
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     background: #54c0ff;
@@ -10,4 +10,19 @@ footer {
 
 .fa {
 	color:white;
+	font-size: 36px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+}
+
+.disabled {
+	margin-right: 4%;
+	margin-left: 4%;
+	padding-top: 10px;
+}
+
+#copyClk{
+	margin-left: 15%;
+	padding-top: 10px;
 }
