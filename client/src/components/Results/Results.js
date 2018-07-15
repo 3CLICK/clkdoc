@@ -112,7 +112,7 @@ class Results extends Component {
                 <span className="glyphicon glyphicon-star" />
                 <h5 className="card-title">Robert Ayala</h5>
                 <h6 className="card-text">Cardiologist</h6>
-                <h6 className="card-text">555 SW 40 Ave. 33197</h6>
+                <h6 className="card-text">555 SW 40 Ave. 33197, Doral, Florida</h6>
                 <a href="#" className="btn btn-primary">Select</a>
                 {/*Need if/else function. Sign-in modal if guest, view doc profile otherwise*/}
               </div>
@@ -127,8 +127,8 @@ class Results extends Component {
                 <span className="glyphicon glyphicon-star" />
                 <span className="glyphicon glyphicon-star" />
                 <h5 className="card-title">Melvin Vasquez</h5>
-                <h6 className="card-text">Physical Therapist</h6>
-                <h6 className="card-text">4501 NW 195th Street</h6>
+                <h6 className="card-text">Cardiologist</h6>
+                <h6 className="card-text">4501 NW 195th Street, Miami Gardens, Florida</h6>
                 <a href="#" className="btn btn-primary">Select</a>
                 {/*Need if/else function. Sign-in modal if guest, view doc profile otherwise*/}
               </div>
@@ -143,7 +143,7 @@ class Results extends Component {
                 <span className="glyphicon glyphicon-star" />
                 <span className="glyphicon glyphicon-star" />
                 <h5 className="card-title">Nelson Diez</h5>
-                <h6 className="card-text">Oncologist</h6>
+                <h6 className="card-text">Cardiologist</h6>
                 <h6 className="card-text">1320 S Dixie Hwy, Coral Gables, FL 33146</h6>
                 <a href="#" className="btn btn-primary">Select</a>
                 {/*Need if/else function. Sign-in modal if guest, view doc profile otherwise*/}
@@ -158,7 +158,7 @@ class Results extends Component {
                 <span className="glyphicon glyphicon-star" />
                 <span className="glyphicon glyphicon-star" />
                 <span className="glyphicon glyphicon-star" />
-                <h5 className="card-title">John Smith</h5>
+                <h5 className="card-title">Cardiologist</h5>
                 <h6 className="card-text">Physician</h6>
                 <h6 className="card-text">4444 NW 13th Street, Tardis, Gallifrey</h6>
                 <a href="#" className="btn btn-primary">Select</a>
